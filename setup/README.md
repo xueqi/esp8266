@@ -26,6 +26,8 @@ for Python 3
 * Connect with Putty
 	* use Serial, baud: 115200, set parity and flow control to None
 	* if no response: Reflash, add option --flash_mode dio. See [Issue](https://github.com/nodemcu/nodemcu-firmware/issues/2009)
+	* if putty does not show anything, try reset the board.(Reset button on NodeMCU)
+	* if see python interpreter, but could not input anything, make sure the parity and flow control on putty setting is None.
 * NodeMCU board pinout
 [NodeMCU board pinout](https://github.com/nodemcu/nodemcu-devkit-v1.0)
 
