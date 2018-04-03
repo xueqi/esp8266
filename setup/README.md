@@ -24,5 +24,8 @@ for Python 3
 * flash the firmware
 	* esptool.py --port COM4 --baud 115200 write_flash --flash_size=detect 0 esp8266-20171101-v1.9.3.bin
 * Connect with Putty
-	* use Serial, baud: 115200
+	* use Serial, baud: 115200, set parity and flow control to None
 	* if no response: Reflash, add option --flash_mode dio. See [Issue](https://github.com/nodemcu/nodemcu-firmware/issues/2009)
+* NodeMCU board pinout
+[NodeMCU board pinout](https://github.com/nodemcu/nodemcu-devkit-v1.0)
+
