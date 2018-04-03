@@ -1,6 +1,6 @@
 # Setup ESP8266 
 ## Requirement:
-ESP8266 board with 1M flash. (Do not use 512k one for learning)
+ESP8266 board with at least 1M flash. (Do not use 512k one for learning)
 ## NodeMCU Board
 NodeMCU board is a development board.
 
@@ -19,6 +19,8 @@ for Python 3
 * NodeMCU board comes with USB micro B connection, so there is no need to wireup the flash circuit.
 * Connect NodeMCU board with USB cable, identify the port. (On windows should be COM?, linux: /dev/tty??)
 	* if device is not recognized, install the usb to serial driver. The driver depends what the board use. Check the rectangular chip on board. Reads as CH340G or Cp2102 or CH341
+	* on windows, use command 'mode' in terminal
+	* on linux, use 'ls -l /dev/tty\*', check the latest one
 * erase old firmware
 	* esptool.py --port COM4 erase_flash
 * flash the firmware
@@ -30,4 +32,10 @@ for Python 3
 	* if see python interpreter, but could not input anything, make sure the parity and flow control on putty setting is None.
 * NodeMCU board pinout
 [NodeMCU board pinout](https://github.com/nodemcu/nodemcu-devkit-v1.0)
+
+** ESP-01 board
+ESP-01 board is from Ai-Thinker. ESP-01 has 512K flash, while ESP-01S version has 1M flash. We use ESP-01S here, because Micropython needs at least 1M to support the file system
+ESP-01 is the simple version for ESP8266, which only exposes GPIO0 and GPIO2 interface. So if a project only needs two GPIO, ESP-01 is a good choice.
+ESP-01 does not come with USB2Serial interface, so another usb2serial module is needed to flash the ESP-01.(Google for usb to ttl module)
+And ESP-01 board is hard to used on breadbord. An adaptor is good for breadboard.(Google for image : esp01 breadboard adaptor)
 
