@@ -33,9 +33,10 @@ for Python 3
 * NodeMCU board pinout
 [NodeMCU board pinout](https://github.com/nodemcu/nodemcu-devkit-v1.0)
 
-** ESP-01 board
+## ESP-01 board
 ESP-01 board is from Ai-Thinker. ESP-01 has 512K flash, while ESP-01S version has 1M flash. We use ESP-01S here, because Micropython needs at least 1M to support the file system
 ESP-01 is the simple version for ESP8266, which only exposes GPIO0 and GPIO2 interface. So if a project only needs two GPIO, ESP-01 is a good choice.
 ESP-01 does not come with USB2Serial interface, so another usb2serial module is needed to flash the ESP-01.(Google for usb to ttl module)
 And ESP-01 board is hard to used on breadbord. An adaptor is good for breadboard.(Google for image : esp01 breadboard adaptor)
-
+* flash circuit
+![esp01 flash](esp-01-flashing-diagram.png)
